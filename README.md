@@ -20,8 +20,8 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 ![covid_android_2](https://user-images.githubusercontent.com/11803107/79575346-04ac3380-8098-11ea-817e-5b663dd33a8a.png)
 
 ### iOS
-![covid19_ios](https://user-images.githubusercontent.com/11803107/79571517-aed48d00-8091-11ea-9d11-9506759ad475.PNG)
-![covid19_ios2](https://user-images.githubusercontent.com/11803107/79571578-ca3f9800-8091-11ea-9f30-a0569bf7b404.PNG)
+![covid19_ios](https://user-images.githubusercontent.com/11803107/79575567-62d91680-8098-11ea-8655-6712af67776b.PNG)
+![covid19_ios2](https://user-images.githubusercontent.com/11803107/79575597-6c627e80-8098-11ea-8e3a-fc6f218853e7.PNG)
 
 ## Créditos
 ### Fonte dos dados

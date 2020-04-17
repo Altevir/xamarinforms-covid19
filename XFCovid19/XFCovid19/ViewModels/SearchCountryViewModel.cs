@@ -178,7 +178,7 @@ namespace XFCovid19.ViewModels
                 if (cultureInfoPtBR)
                     countries = _db.FindAll().OrderBy(p => p.countryPtBR).Take(20);
                 else
-                    countries = _db.FindAll().OrderBy(p => p.countryPtBR).Take(20);
+                    countries = _db.FindAll().OrderBy(p => p.country).Take(20);
 
                 foreach (var item in _db.FindAll().Take(20))
                     Countries.Add(item);

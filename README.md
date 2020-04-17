@@ -30,7 +30,7 @@ https://github.com/novelcovid/api <br/>
 ### Design
 Edward Yeboah <br/>
 https://twitter.com/edwardyeboah_ <br/>Sigam ele no Twitter =)
-![covid19](https://user-images.githubusercontent.com/11803107/79572192-e42daa80-8092-11ea-96c5-406265f25ab7.jpg)
+![covid19_design](https://user-images.githubusercontent.com/11803107/79575829-c06d6300-8098-11ea-954a-c30bf426adcc.png)
 
 ### Licença
 MIT - Consulte o arquivo LICENSE.txt

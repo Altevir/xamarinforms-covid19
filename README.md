@@ -17,3 +17,7 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 ## Screenshots
 ### Android
 ![screenshot-1587085759582](https://user-images.githubusercontent.com/11803107/79569740-92832100-808e-11ea-80cf-db85f1bc7bf9.png)
+![screenshot-1587085771853](https://user-images.githubusercontent.com/11803107/79569955-fb6a9900-808e-11ea-9f6a-7f8c11155903.png)
+
+### iOS
+

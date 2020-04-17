@@ -21,4 +21,6 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 
 ### iOS
 ![covid19_ios](https://user-images.githubusercontent.com/11803107/79571517-aed48d00-8091-11ea-9d11-9506759ad475.PNG)
+![covid19_ios2](https://user-images.githubusercontent.com/11803107/79571578-ca3f9800-8091-11ea-9f30-a0569bf7b404.PNG)
+
 

@@ -5,9 +5,9 @@ O que foi usado:
 - Flurl para requisições http (https://flurl.dev/)
 - PancakeView (https://github.com/sthewissen/Xamarin.Forms.PancakeView)
 - LiteDB pra armazenar dados no device (criado por um BR/wowwwww - https://github.com/mbdavid/LiteDB)
-- Rg.Plugins.Popup (https://github.com/rotorgames/Rg.Plugins.Popup)
+- Rg.Plugins.Popup (https://github.com/rotorgames/Rg.Plugins.Popup) <br/>
 Exemplo: https://medium.com/@bertuzzi/o-x-do-xamarin-forms-pop-ups-5cffa68ee3e
-- PluginMultilingual (https://github.com/CrossGeeks/MultilingualPlugin)
+- PluginMultilingual (https://github.com/CrossGeeks/MultilingualPlugin) <br/>
 Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 - Skeleton (https://github.com/HorusSoftwareUY/Xamarin.Forms.Skeleton)
 - FFImageLoading (https://github.com/luberda-molinet/FFImageLoading)
@@ -16,8 +16,8 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 
 ## Screenshots
 ### Android
-![screenshot-1587085759582](https://user-images.githubusercontent.com/11803107/79569740-92832100-808e-11ea-80cf-db85f1bc7bf9.png)
-![screenshot-1587085771853](https://user-images.githubusercontent.com/11803107/79569955-fb6a9900-808e-11ea-9f6a-7f8c11155903.png)
+<img src="https://user-images.githubusercontent.com/11803107/79569740-92832100-808e-11ea-80cf-db85f1bc7bf9.png" width="300" height="480">
+<img src="https://user-images.githubusercontent.com/11803107/79569955-fb6a9900-808e-11ea-9f6a-7f8c11155903.png" width="300" height="480">
 
 ### iOS
 ![covid19_ios](https://user-images.githubusercontent.com/11803107/79571517-aed48d00-8091-11ea-9d11-9506759ad475.PNG)

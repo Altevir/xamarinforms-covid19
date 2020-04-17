@@ -24,6 +24,9 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 ![covid19_ios](https://user-images.githubusercontent.com/11803107/79575567-62d91680-8098-11ea-8655-6712af67776b.PNG)
 ![covid19_ios2](https://user-images.githubusercontent.com/11803107/79575597-6c627e80-8098-11ea-8e3a-fc6f218853e7.PNG)
 
+### Gif
+![ezgif-3-9c9e2accfb2b](https://user-images.githubusercontent.com/11803107/79587522-0b8f7200-80a9-11ea-8830-3d293824acaa.gif)
+
 ## Créditos
 ### Fonte dos dados
 https://github.com/novelcovid/api <br/>

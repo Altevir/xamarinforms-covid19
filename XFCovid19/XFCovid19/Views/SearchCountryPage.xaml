@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="XFCovid19.Views.SearchCountryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:converter="clr-namespace:XFCovid19.Converters"
+    xmlns:custom="clr-namespace:XFCovid19.Renderers"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fonticons="clr-namespace:XFCovid19.Fonts"
+    xmlns:helpers="clr-namespace:XFCovid19.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:XFCovid19.Models"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:viewmodels="clr-namespace:XFCovid19.ViewModels"
+    x:DataType="viewmodels:SearchCountryViewModel"
+    mc:Ignorable="d">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+
+    <pancake:PancakeView
+        Margin="0,148,0,0"
+        Padding="0"
+        BackgroundColor="{DynamicResource SearchPageBackgroundColor}"
+        CornerRadius="25,25,0,0"
+        HasShadow="True">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Padding="10,10,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                    </Grid.ColumnDefinitions>
+                    <custom:CustomEntryBorderless
+                        Grid.Column="0"
+                        Margin="{OnPlatform Android='6,0,0,0',
+                                            iOS='10,0,0,0'}"
+                        Placeholder="{helpers:Translate SearchPlaceholder}"
+                        PlaceholderColor="{DynamicResource SearchPageLabelTextColor}"
+                        Text="{Binding SearchText}"
+                        TextColor="{DynamicResource SearchPageLabelTextColor}" />
+                    <Label
+                        Grid.Column="1"
+                        Margin="0,0,30,0"
+                        FontFamily="{StaticResource Fontello}"
+                        FontSize="24"
+                        Text="{x:Static fonticons:FontIcons.Search}"
+                        TextColor="{DynamicResource SearchPageLabelTextColor}"
+                        VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SearchCountryCommand}" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <pancake:PancakeView
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="{OnPlatform Android='0,-20,0,0',
+                                        iOS='0,-15,0,0'}"
+                    Padding="0"
+                    BackgroundGradientAngle="45"
+                    BackgroundGradientEndColor="#201F4C"
+                    BackgroundGradientStartColor="#5E3388"
+                    CornerRadius="30,0,30,0"
+                    Elevation="6"
+                    HasShadow="False"
+                    HeightRequest="58"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="58">
+                    <ImageButton
+                        Margin="2,0,0,0"
+                        Padding="10"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ClosePopUpCommand}"
+                        CornerRadius="18"
+                        HeightRequest="36"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Center"
+                        WidthRequest="36">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{StaticResource Fontello}"
+                                Glyph="{x:Static fonticons:FontIcons.Close}"
+                                Color="White" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </pancake:PancakeView>
+                <Label
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="10,0,0,0"
+                    HorizontalOptions="StartAndExpand"
+                    IsVisible="{Binding ShowInfo}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontFamily="{StaticResource FontGilroyMedium}"
+                                FontSize="Medium"
+                                Text="{Binding TotalCountries}"
+                                TextColor="{DynamicResource SearchPageLabelTextColor}" />
+                            <Span
+                                FontFamily="{StaticResource FontAvenir}"
+                                FontSize="Small"
+                                Text="{Binding CountriesFacing, StringFormat=' {0}'}"
+                                TextColor="{DynamicResource SearchPageLabelTextColor}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    Grid.Row="2"
+                    Margin="10,0,0,0"
+                    FontFamily="{StaticResource FontAvenir}"
+                    FontSize="Micro"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="{Binding ShowInfo}"
+                    Text="{Binding SelectOneCountryList}"
+                    TextColor="{DynamicResource SearchPageLabelTextColor}" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <CollectionView
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="{OnPlatform Android='0',
+                                        iOS='0,10,0,0'}"
+                    BackgroundColor="{DynamicResource SearchPageBackgroundColor}"
+                    ItemSizingStrategy="MeasureAllItems"
+                    ItemsSource="{Binding Countries}"
+                    RemainingItemsThreshold="{Binding ItemTreshold}"
+                    RemainingItemsThresholdReachedCommand="{Binding ItemTresholdReachedCommand}"
+                    SelectedItem="{Binding CountrySelected}"
+                    SelectionChangedCommand="{Binding CountrySelectedCommand}"
+                    SelectionChangedCommandParameter="{Binding CountrySelected}"
+                    SelectionMode="Single"
+                    VerticalScrollBarVisibility="Never">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Country">
+                            <Grid Padding="20,0,0,10" RowSpacing="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <pancake:PancakeView
+                                    Grid.Column="0"
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    CornerRadius="6"
+                                    Elevation="4"
+                                    HasShadow="False"
+                                    HeightRequest="45"
+                                    WidthRequest="70">
+                                    <ffimage:CachedImage
+                                        Aspect="AspectFill"
+                                        BackgroundColor="Transparent"
+                                        CacheDuration="1"
+                                        DownsampleToViewSize="True"
+                                        Source="{Binding countryInfo.flag}" />
+                                </pancake:PancakeView>
+                                <Label
+                                    Grid.Column="1"
+                                    Margin="10,0,15,0"
+                                    FontFamily="{StaticResource FontGilroyMedium}"
+                                    FontSize="{OnPlatform Android='16',
+                                                          iOS='16'}"
+                                    Text="{Binding country, Converter={converter:ConverterCountryName}}"
+                                    TextColor="{DynamicResource SearchPageLabelTextColor}"
+                                    VerticalOptions="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <ActivityIndicator
+                    Grid.Column="1"
+                    Margin="0,0,20,20"
+                    HeightRequest="36"
+                    IsRunning="True"
+                    IsVisible="{Binding IsVisibleActivityIndicator}"
+                    VerticalOptions="End"
+                    WidthRequest="36"
+                    Color="{DynamicResource SearchPageActivityIndColor}" />
+                <StackLayout
+                    Grid.ColumnSpan="2"
+                    HorizontalOptions="FillAndExpand"
+                    IsVisible="{Binding ShowLoader}">
+                    <ActivityIndicator
+                        HeightRequest="36"
+                        IsRunning="{Binding ShowLoader}"
+                        IsVisible="True"
+                        WidthRequest="36"
+                        Color="{DynamicResource SearchPageActivityIndColor}" />
+                    <Label
+                        FontSize="Small"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding MessageLoader}"
+                        TextColor="{DynamicResource SearchPageActivityIndColor}" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </pancake:PancakeView>
+</pages:PopupPage>

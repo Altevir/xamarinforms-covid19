@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="XFCovid19.Views.InternetWarningPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonticons="clr-namespace:XFCovid19.Fonts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Top"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <pancake:PancakeView
+        Margin="0,0,0,600"
+        Padding="0"
+        BackgroundColor="#ef5350"
+        CornerRadius="0,0,25,25"
+        HasShadow="True">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Column="0"
+                Margin="40,0,0,0"
+                FontFamily="{StaticResource FontAvenir}"
+                FontSize="Small"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding InternetNotConnected}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <ImageButton
+                Grid.Column="1"
+                Margin="0,0,10,0"
+                Padding="10"
+                BackgroundColor="Transparent"
+                Command="{Binding ClosePopUpCommand}"
+                HeightRequest="36"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                WidthRequest="45">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{StaticResource Fontello}"
+                        Glyph="{x:Static fonticons:FontIcons.Close}"
+                        Color="White" />
+                </ImageButton.Source>
+            </ImageButton>
+        </Grid>
+    </pancake:PancakeView>
+</pages:PopupPage>

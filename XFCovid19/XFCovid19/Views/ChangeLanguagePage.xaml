@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="XFCovid19.Views.ChangeLanguagePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:fonticons="clr-namespace:XFCovid19.Fonts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:theme="clr-namespace:XFCovid19.ThemeResources"
+    mc:Ignorable="d">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Top"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <ContentPage.Content>
+        <pancake:PancakeView
+            Padding="0"
+            BackgroundGradientAngle="90"
+            BackgroundGradientEndColor="#211F4E"
+            BackgroundGradientStartColor="#7C45B3"
+            CornerRadius="0,0,25,25"
+            HasShadow="True"
+            HeightRequest="105"
+            VerticalOptions="Start">
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    Margin="30,13,0,0"
+                    HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        Margin="0,0,10,0"
+                        FontFamily="{DynamicResource FontAvenir}"
+                        FontSize="Micro"
+                        Text="{Binding LanguageSelection}"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <ImageButton
+                        Grid.Column="1"
+                        Aspect="AspectFill"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ChangeLanguageCommand}"
+                        CommandParameter="pt"
+                        CornerRadius="6"
+                        HeightRequest="22"
+                        HorizontalOptions="End"
+                        Source="flag_br"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <BoxView
+                        Grid.Column="1"
+                        Margin="0,0,-5,0"
+                        BackgroundColor="#F4195D"
+                        CornerRadius="5"
+                        HeightRequest="10"
+                        HorizontalOptions="End"
+                        IsVisible="{Binding IsVisibleCheckFlagBR}"
+                        VerticalOptions="Start"
+                        WidthRequest="10" />
+                    <ImageButton
+                        Grid.Column="2"
+                        Aspect="AspectFill"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ChangeLanguageCommand}"
+                        CommandParameter="en"
+                        CornerRadius="6"
+                        HeightRequest="22"
+                        HorizontalOptions="Start"
+                        Source="flag_us"
+                        VerticalOptions="Center"
+                        WidthRequest="40" />
+                    <BoxView
+                        Grid.Column="2"
+                        Margin="0,0,-5,0"
+                        BackgroundColor="#F4195D"
+                        CornerRadius="5"
+                        HeightRequest="10"
+                        HorizontalOptions="End"
+                        IsVisible="{Binding IsVisibleCheckFlagUSA}"
+                        VerticalOptions="Start"
+                        WidthRequest="10" />
+                    <ImageButton
+                        Grid.Column="3"
+                        Margin="0,0,0,0"
+                        Padding="10"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ClosePopUpCommand}"
+                        HeightRequest="36"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center"
+                        WidthRequest="45">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{StaticResource Fontello}"
+                                Glyph="{x:Static fonticons:FontIcons.Close}"
+                                Color="White" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    Margin="{OnPlatform Android='40,0,0,0',
+                                        iOS='59,0,0,0'}"
+                    HorizontalOptions="Start"
+                    Orientation="Horizontal">
+                    <Label
+                        FontFamily="{DynamicResource FontAvenir}"
+                        FontSize="Micro"
+                        Text="{Binding ThemeSelection}"
+                        TextColor="White"
+                        VerticalOptions="Center" />
+                    <Switch
+                        x:Name="switchChangeTheme"
+                        Margin="{OnPlatform Android='45,0,0,0',
+                                            iOS='52,0,0,0'}"
+                        HeightRequest="28"
+                        IsToggled="{Binding AppDarkTheme}"
+                        OnColor="#EEE"
+                        ThumbColor="#F4195D"
+                        WidthRequest="48" />
+                </StackLayout>
+            </Grid>
+        </pancake:PancakeView>
+    </ContentPage.Content>
+</pages:PopupPage>

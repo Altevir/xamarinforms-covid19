@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="XFCovid19.ThemeResources.LightTheme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+
+    <OnPlatform x:Key="FontAvenir" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Avenir Book.ttf#Avenir Book" />
+        <On Platform="iOS" Value="Avenir Book" />
+    </OnPlatform>
+    <OnPlatform x:Key="FontGilroyRegular" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Gilroy-Regular.ttf#Gilroy-Regular" />
+        <On Platform="iOS" Value="Gilroy-Regular" />
+    </OnPlatform>
+    <OnPlatform x:Key="FontGilroyMedium" x:TypeArguments="x:String">
+        <On Platform="Android" Value="Gilroy-Medium.ttf#Gilroy-Medium" />
+        <On Platform="iOS" Value="Gilroy-Medium" />
+    </OnPlatform>
+    <OnPlatform x:Key="Fontello" x:TypeArguments="x:String">
+        <On Platform="Android" Value="fontello.ttf#Regular" />
+        <On Platform="iOS" Value="fontello" />
+    </OnPlatform>
+    <Style x:Key="fontGilroyMedium12" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="#000000" />
+    </Style>
+    <Style x:Key="lbHeaderAndroid" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="20" />
+    </Style>
+    <Style x:Key="lbHeaderiOS" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="23" />
+    </Style>
+    <Style x:Key="lbSubTitleHeader" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+    <Style x:Key="lbLastUpdateGlobal" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+    <Style x:Key="lbLastUpdateCountry" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="FontSize" Value="13" />
+    </Style>
+    <Style x:Key="lbFooter" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="TextColor" Value="#000000" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+    <Style x:Key="lbRefresh" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontAvenir}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#4998F4" />
+    </Style>
+    <Style x:Key="lbTotalCasosConfirmados" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#4998F4" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+    <Style x:Key="lbTotalCasosRecuperados" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#13E015" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+    <Style x:Key="lbTotalMortes" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource FontGilroyMedium}" />
+        <Setter Property="TextColor" Value="#F4195D" />
+        <Setter Property="FontSize" Value="25" />
+    </Style>
+    <Style x:Key="btnLeiaMais" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#4998F4" />
+        <Setter Property="HeightRequest" Value="34" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="Margin" Value="{OnPlatform Android='0,15,75,25', iOS='0,15,80,25'}" />
+        <Setter Property="Padding" Value="4" />
+    </Style>
+    <Style x:Key="FrameTotal" TargetType="pancake:PancakeView">
+        <Setter Property="BackgroundColor" Value="#FFFFFF" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Elevation" Value="2" />
+        <Setter Property="HasShadow" Value="False" />
+        <Setter Property="Padding" Value="0" />
+    </Style>
+    <Style x:Key="ImageDoctor" TargetType="Image">
+        <Setter Property="Aspect" Value="AspectFill" />
+        <Setter Property="Source" Value="doctor.png" />
+    </Style>
+    <Color x:Key="MainPageBackgroundColor">#EEE</Color>
+    <Color x:Key="SkeletonLabelBackground">#EEEEEE</Color>
+    <Color x:Key="SkeletonStackBackground">#F5F5F5</Color>
+    <Color x:Key="SearchPageBackgroundColor">#EEE</Color>
+    <Color x:Key="SearchPageLabelTextColor">#000000</Color>
+    <Color x:Key="SearchPageActivityIndColor">#201F4C</Color>
+</ResourceDictionary>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="XFCovid19.Views.ReadMorePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fonticons="clr-namespace:XFCovid19.Fonts"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Right"
+            PositionOut="Right"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+
+    <ContentPage.Resources>
+        <Color x:Key="textColorHeader">#4E0D8D</Color>
+        <Color x:Key="textColorLabel">#000000</Color>
+    </ContentPage.Resources>
+    <pancake:PancakeView
+        Margin="0,0,0,0"
+        Padding="0"
+        BackgroundColor="#eee"
+        CornerRadius="0,0,0,0"
+        HasShadow="True"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout
+                    Grid.Row="0"
+                    Padding="25,10,10,0"
+                    HeightRequest="48"
+                    Orientation="Horizontal">
+                    <Label
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="Medium"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Sobre o Covid-19"
+                        TextColor="{StaticResource textColorLabel}"
+                        VerticalOptions="Center" />
+                    <ImageButton
+                        Padding="10"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ClosePopUpCommand}"
+                        HeightRequest="36"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        WidthRequest="45">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{StaticResource Fontello}"
+                                Glyph="{x:Static fonticons:FontIcons.Close}"
+                                Color="Black" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Padding="25,10,25,30">
+                    <Label
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="18"
+                        Text="O que é coronavírus? (COVID-19)"
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        Margin="0,20,0,0"
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="18"
+                        Text="Coronavírus é uma família de vírus que causam infecções respiratórias. O novo agente do coronavírus foi descoberto em 31/12/19 após casos registrados na China. Provoca a doença chamada de coronavírus (COVID-19). Os primeiros coronavírus humanos foram isolados pela primeira vez em 1937. No entanto, foi em 1965 que o vírus foi descrito como coronavírus, em decorrência do perfil na microscopia, parecendo uma coroa. A maioria das pessoas se infecta com os coronavírus comuns ao longo da vida, sendo as crianças pequenas mais propensas a se infectarem com o tipo mais comum do vírus. Os coronavírus mais comuns que infectam humanos são o alpha coronavírus 229E e NL63 e beta coronavírus OC43, HKU1..."
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        Margin="0,20,0,10"
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="Medium"
+                        Text="O que você precisa saber e fazer. &#10;Como prevenir o contágio:"
+                        TextColor="{StaticResource textColorHeader}" />
+                    <Label
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="16"
+                        Text="- Lave as mãos com água e sabão ou use álcool em gel"
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="16"
+                        Text="- Cubra o nariz e boca ao espirrar ou tossir"
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="16"
+                        Text="- Evite aglomerações se estiver doente."
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="16"
+                        Text="- Mantenha os ambientes bem ventilados."
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="16"
+                        Text="- Não compartilhe objetos pessoais."
+                        TextColor="{StaticResource textColorLabel}" />
+                    <Label
+                        Margin="0,20,0,0"
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Para maiores informações acesse"
+                        TextColor="{StaticResource textColorHeader}" />
+                    <Label
+                        x:Name="lbUrl"
+                        Grid.Column="0"
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="Small"
+                        Text="https://coronavirus.saude.gov.br/"
+                        TextColor="Black"
+                        TextDecorations="Underline"
+                        VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding OpenUrlCommand}"
+                                CommandParameter="{Binding Source={x:Reference lbUrl}, Path=Text}"
+                                NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <BoxView
+                        Margin="0,40,0,20"
+                        BackgroundColor="{StaticResource textColorHeader}"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand" />
+                    <Label
+                        Margin="0,0,0,0"
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Créditos"
+                        TextColor="{StaticResource textColorHeader}" />
+                    <Label
+                        Margin="0,0,0,0"
+                        FontFamily="{StaticResource FontGilroyMedium}"
+                        FontSize="16"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Fonte dos dados (API)"
+                        TextColor="{StaticResource textColorHeader}" />
+                    <Label
+                        x:Name="lbUrlGit"
+                        FontFamily="{StaticResource FontGilroyRegular}"
+                        FontSize="Small"
+                        Text="https://github.com/novelcovid/api"
+                        TextColor="{StaticResource textColorLabel}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding OpenUrlGitCommand}"
+                                CommandParameter="{Binding Source={x:Reference lbUrlGit}, Path=Text}"
+                                NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </pancake:PancakeView>
+
+</pages:PopupPage>

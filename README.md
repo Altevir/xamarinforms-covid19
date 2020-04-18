@@ -32,8 +32,7 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 https://github.com/novelcovid/api <br/>
 (Ontem saiu a v2 da API) 
 ### Design
-Edward Yeboah <br/>
-https://twitter.com/edwardyeboah_ <br/>Sigam ele no Twitter =) <br/>
+[Edward Yeboah](https://twitter.com/edwardyeboah_) <br/>Sigam ele no Twitter =) <br/>
 ![covid19_design](https://user-images.githubusercontent.com/11803107/79575829-c06d6300-8098-11ea-954a-c30bf426adcc.png)
 
 ### Licença

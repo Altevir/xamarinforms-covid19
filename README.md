@@ -1,6 +1,6 @@
 # Xamarin.Forms Covid-19 Live
 Desenvolvido com o intuito de acompanhar os casos de Covid-19 com dados dos países afetados, incluindo o Brasil.
-O que foi usado:
+O que foi usado no desenvolvimento:
 - Padrão MVVM (sem framework)
 - Flurl para requisições http (https://flurl.dev/)
 - PancakeView (https://github.com/sthewissen/Xamarin.Forms.PancakeView)
@@ -13,6 +13,7 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 - FFImageLoading (https://github.com/luberda-molinet/FFImageLoading)
 - XamarinEssentials 1.5.2 (https://docs.microsoft.com/pt-br/xamarin/essentials/)
 - XamarinForms 4.5.0.530
+- Em breve estará disponível na Play Store, devido a essa pandemia o processo de liberação do app está mais demorado, atualizarei aqui com o link para download.
 
 ## Screenshots
 ### Android
@@ -22,6 +23,9 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 ### iOS
 ![covid19_ios](https://user-images.githubusercontent.com/11803107/79575567-62d91680-8098-11ea-8655-6712af67776b.PNG)
 ![covid19_ios2](https://user-images.githubusercontent.com/11803107/79575597-6c627e80-8098-11ea-8e3a-fc6f218853e7.PNG)
+
+### Gif
+![ezgif-3-9c9e2accfb2b](https://user-images.githubusercontent.com/11803107/79587522-0b8f7200-80a9-11ea-8830-3d293824acaa.gif)
 
 ## Créditos
 ### Fonte dos dados

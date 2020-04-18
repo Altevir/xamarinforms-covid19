@@ -14,8 +14,7 @@ namespace XFCovid19
         {
             InitializeComponent();
 
-            var appLanguage = Preferences.Get("appLanguage", "pt");
-            AppCultureInfo = string.IsNullOrEmpty(appLanguage) ? "pt" : appLanguage;
+            AppCultureInfo = Preferences.Get("appLanguage", "pt");
             AppResources.Culture = new CultureInfo(AppCultureInfo);
             CrossMultilingual.Current.CurrentCultureInfo = new CultureInfo(AppCultureInfo);
 

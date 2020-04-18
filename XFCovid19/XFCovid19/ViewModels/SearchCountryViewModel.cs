@@ -129,18 +129,16 @@ namespace XFCovid19.ViewModels
 
                 if (CurrentPage < TotalPages)
                 {
-                    List<Country> countries;
+                    IEnumerable<Country> countries;
                     if (App.AppCultureInfo.Equals("pt"))
                         countries = _db.FindAll()
                             .OrderBy(p => p.countryPtBR)
                             .Skip((CurrentPage - 1) * 20)
-                            .Take(20).ToList()
-                            .ToList();
+                            .Take(20);
                     else
                         countries = _db.FindAll()
                             .Skip((CurrentPage - 1) * 20)
-                            .Take(20)
-                            .ToList();
+                            .Take(20);
 
                     foreach (var item in countries)
                         Countries.Add(item);
@@ -193,12 +191,10 @@ namespace XFCovid19.ViewModels
                     if (cultureInfoPtBR)
                         countries = _db.FindAll()
                             .Where(p => p.countryPtBR.ToLower().RemoveAccents().Contains(SearchText.ToLower().RemoveAccents()))
-                            .OrderBy(p => p.countryPtBR)
-                            .ToList();
+                            .OrderBy(p => p.countryPtBR);
                     else
                         countries = _db.FindAll()
-                            .Where(p => p.country.ToLower().Contains(SearchText.ToLower()))
-                            .ToList();
+                            .Where(p => p.country.ToLower().Contains(SearchText.ToLower()));
 
                     foreach (var item in countries)
                         Countries.Add(item);

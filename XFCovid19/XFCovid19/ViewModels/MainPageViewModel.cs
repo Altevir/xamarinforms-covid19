@@ -470,6 +470,8 @@ namespace XFCovid19.ViewModels
 
         void SetDarkTheme(bool darkTheme)
         {
+            DependencyService.Get<IStatusBarStyle>().ChangeTextColor(darkTheme);
+
             if (darkTheme)
             {
                 IconArrow = "ic_chevron_down_white";

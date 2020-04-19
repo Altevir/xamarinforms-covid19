@@ -470,7 +470,8 @@ namespace XFCovid19.ViewModels
 
         void SetDarkTheme(bool darkTheme)
         {
-            DependencyService.Get<IStatusBarStyle>().ChangeTextColor(darkTheme);
+            if (Device.RuntimePlatform == Device.iOS)
+                DependencyService.Get<IStatusBarStyle>().ChangeTextColor(darkTheme);
 
             if (darkTheme)
             {

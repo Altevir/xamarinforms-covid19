@@ -34,44 +34,47 @@
             HasShadow="True"
             HeightRequest="105"
             VerticalOptions="Start">
-            <Grid HorizontalOptions="FillAndExpand" RowSpacing="5">
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="{OnPlatform Android='0', iOS='5'}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                <Grid
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*" />
+                    <ColumnDefinition Width=".3*" />
+                    <ColumnDefinition Width=".2*" />
+                </Grid.ColumnDefinitions>
+                <Label
                     Grid.Row="0"
-                    Margin="30,13,0,0"
-                    HorizontalOptions="Center">
+                    Grid.Column="0"
+                    Margin="40,20,0,0"
+                    FontFamily="{DynamicResource FontAvenir}"
+                    FontSize="Micro"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding LanguageSelection}"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Grid Grid.Row="0" Grid.Column="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="auto" />
-                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label
-                        Grid.Column="0"
-                        Margin="0,0,10,0"
-                        FontFamily="{DynamicResource FontAvenir}"
-                        FontSize="Micro"
-                        Text="{Binding LanguageSelection}"
-                        TextColor="White"
-                        VerticalOptions="Center" />
                     <ImageButton
-                        Grid.Column="1"
+                        Grid.Column="0"
+                        Margin="0,20,0,0"
                         Aspect="AspectFill"
                         BackgroundColor="Transparent"
                         Command="{Binding ChangeLanguageCommand}"
                         CommandParameter="pt"
                         CornerRadius="6"
                         HeightRequest="22"
-                        HorizontalOptions="End"
+                        HorizontalOptions="Start"
                         Source="flag_br"
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <BoxView
-                        Grid.Column="1"
-                        Margin="0,0,-5,0"
+                        Grid.Column="0"
+                        Margin="0,18,-5,0"
                         BackgroundColor="#F4195D"
                         CornerRadius="5"
                         HeightRequest="10"
@@ -80,7 +83,8 @@
                         VerticalOptions="Start"
                         WidthRequest="10" />
                     <ImageButton
-                        Grid.Column="2"
+                        Grid.Column="1"
+                        Margin="0,20,0,0"
                         Aspect="AspectFill"
                         BackgroundColor="Transparent"
                         Command="{Binding ChangeLanguageCommand}"
@@ -92,8 +96,8 @@
                         VerticalOptions="Center"
                         WidthRequest="40" />
                     <BoxView
-                        Grid.Column="2"
-                        Margin="0,0,-5,0"
+                        Grid.Column="1"
+                        Margin="0,18,-5,0"
                         BackgroundColor="#F4195D"
                         CornerRadius="5"
                         HeightRequest="10"
@@ -101,46 +105,46 @@
                         IsVisible="{Binding IsVisibleCheckFlagUSA}"
                         VerticalOptions="Start"
                         WidthRequest="10" />
-                    <ImageButton
-                        Grid.Column="3"
-                        Margin="0,0,0,0"
-                        Padding="10"
-                        BackgroundColor="Transparent"
-                        Command="{Binding ClosePopUpCommand}"
-                        HeightRequest="36"
-                        HorizontalOptions="EndAndExpand"
-                        VerticalOptions="Center"
-                        WidthRequest="45">
-                        <ImageButton.Source>
-                            <FontImageSource
-                                FontFamily="{StaticResource Fontello}"
-                                Glyph="{x:Static fonticons:FontIcons.Close}"
-                                Color="White" />
-                        </ImageButton.Source>
-                    </ImageButton>
                 </Grid>
-                <StackLayout
+                <ImageButton
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Margin="0,15,10,0"
+                    Padding="10"
+                    BackgroundColor="Transparent"
+                    Command="{Binding ClosePopUpCommand}"
+                    HeightRequest="36"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="45">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource Fontello}"
+                            Glyph="{x:Static fonticons:FontIcons.Close}"
+                            Color="White" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <Label
                     Grid.Row="1"
-                    Margin="{OnPlatform Android='40,0,0,0',
-                                        iOS='59,0,0,0'}"
+                    Grid.Column="0"
+                    Margin="40,0,0,0"
+                    FontFamily="{DynamicResource FontAvenir}"
+                    FontSize="Micro"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{Binding ThemeSelection}"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Switch
+                    x:Name="switchChangeTheme"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="{OnPlatform Android='-5,0,13,0',
+                                        iOS='0'}"
+                    HeightRequest="28"
                     HorizontalOptions="Start"
-                    Orientation="Horizontal">
-                    <Label
-                        FontFamily="{DynamicResource FontAvenir}"
-                        FontSize="Micro"
-                        Text="{Binding ThemeSelection}"
-                        TextColor="White"
-                        VerticalOptions="Center" />
-                    <Switch
-                        x:Name="switchChangeTheme"
-                        Margin="{OnPlatform Android='45,0,0,0',
-                                            iOS='52,0,0,0'}"
-                        HeightRequest="28"
-                        IsToggled="{Binding AppDarkTheme}"
-                        OnColor="#EEE"
-                        ThumbColor="#F4195D"
-                        WidthRequest="48" />
-                </StackLayout>
+                    IsToggled="{Binding AppDarkTheme}"
+                    OnColor="#EEE"
+                    ThumbColor="#F4195D" />
             </Grid>
         </pancake:PancakeView>
     </ContentPage.Content>

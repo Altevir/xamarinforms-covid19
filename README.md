@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/11803107/79746139-e20c5b80-82df-11ea-8039-21680c5b9e35.jpg" width="140" height="80"><br/>
+<img src="https://user-images.githubusercontent.com/11803107/79746139-e20c5b80-82df-11ea-8039-21680c5b9e35.jpg" width="240" height="80"><br/>
 # Xamarin.Forms Covid-19 Live
 Desenvolvido com o intuito de acompanhar os casos de Covid-19 com dados dos países afetados, incluindo o Brasil.
 O que foi usado no desenvolvimento:

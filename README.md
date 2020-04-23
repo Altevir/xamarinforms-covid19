@@ -14,7 +14,6 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 - FFImageLoading (https://github.com/luberda-molinet/FFImageLoading)
 - XamarinEssentials 1.5.2 (https://docs.microsoft.com/pt-br/xamarin/essentials/)
 - XamarinForms 4.5.0.530
-- Em breve estará disponível na Play Store, devido a essa pandemia o processo de liberação do app está mais demorado, atualizarei aqui com o link para download.
 
 ## Screenshots
 ### Android

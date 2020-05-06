@@ -16,7 +16,7 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 - XamarinForms 4.5.0.530
 
 ### Link de instalação
-install.appcenter.ms/users/altevir.cardoso/apps/covid19live/distribution_groups/public
+https://install.appcenter.ms/users/altevir.cardoso/apps/covid19live/distribution_groups/public
 
 ## Screenshots
 ### Android

@@ -15,6 +15,9 @@ Exemplo: https://xamgirl.com/multilingual-localization-plugin-for-xamarin/
 - XamarinEssentials 1.5.2 (https://docs.microsoft.com/pt-br/xamarin/essentials/)
 - XamarinForms 4.5.0.530
 
+### Link de instalação
+install.appcenter.ms/users/altevir.cardoso/apps/covid19live/distribution_groups/public
+
 ## Screenshots
 ### Android
 ![covid_android](https://user-images.githubusercontent.com/11803107/79575316-f827db00-8097-11ea-826e-c94107b2ce1d.png)
